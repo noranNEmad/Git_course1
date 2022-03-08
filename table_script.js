@@ -24,7 +24,6 @@ const submitForm = function (e) {
     customerdata.push(custs)
     writeData(customerdata, "customer")
     this.reset()
-    // window.location.href = "show.html"
     location.reload()
 }
 
@@ -69,8 +68,6 @@ function showAll() {
         showBtn.addEventListener('click', (e) => {
             e.preventDefault();
             body2.innerHTML = ""
-            // const show_arr = []
-            // show_arr.push(cust[index])
             const tr_show = createEl(body2, "tr", null, null)
             createEl(tr_show, 'td', index + 1, null)
             createEl(tr_show, 'td', nnum, null)
@@ -78,33 +75,8 @@ function showAll() {
             createEl(tr_show, "td", cus[index]['adress'], null)
             createEl(tr_show, "td", cus[index]['age'], null)
             showAll()
-            // location.reload();
-            // console.log(cust[index]);
+
         })
 
-        // editBtn.addEventListener('click', function (e){
-        //     heads.forEach(head=>{
-        //       console.log(this.elements.name.value);  
-        //     })
-
-
-        //     console.log();
-        //     // e.preventDefault()
-        //     // =  cust[index]['name']
-        //     // let customers = {}
-        //     // heads.forEach(head => {
-        //     //    console.log(this.elements[head].value);
-        //     // })
-        //     // const customer_data = readData("customer")
-        //     // customer_data.push(customers)
-        //     // writeData(customer_data, "customer")
-        //     // this.reset()
-        //     // // window.location.href = "show.html"
-        //     // location.reload()
-        // })
-    })
-
-}
-
-if (customer) customer.addEventListener("submit", submitForm);
-if (tableBody) showAll()
+        if (customer) customer.addEventListener("submit", submitForm);
+        if (tableBody) showAll()
