@@ -1,0 +1,29 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    <form method="post">
+        <div class="mb-3">
+            <input class="form-control" placeholder="Id" name="id" value="{{customer._id}}" disabled>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" placeholder="OpType" name="optype" value="{{customer._optype}}">
+        </div>
+        <div class=" mb-3">
+            <input class="form-control" placeholder="OpValue" name="opvalue" value="{{customer._opvalue}}">
+        </div>
+        <div class=" mb-3">
+            <input class="form-control" placeholder="IntialBalance" name="intialbalance"
+                value="{{customer._intialbalance}}">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" placeholder="RemaningBalance" name="remaningbalance"
+                value="{{customer._remaningbalance}}">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Addopp</button>
+        </div>
+
+
+    </form>
+</section>
+{{>footer}}
